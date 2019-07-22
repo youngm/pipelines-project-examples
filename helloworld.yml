@@ -4,7 +4,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: manoj_github   # replace with your integration
-      path: pipelines-project-examples    # replace with your repository name
+      path: pipelines-project-examples/app    # replace with your repository name
       branches:
         include: master
 
