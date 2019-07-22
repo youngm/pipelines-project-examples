@@ -13,11 +13,11 @@ pipelines:
       - name: step1
         type: MvnBuild
         configuration:
-      # inherits from bash
-      mvnCommand: clean install
-      sourceLocation: .
-      configFileLocation: .
-      configFileName: settings.xml
-      inputResources:
-        - name: mavenrepo
-      autoPublishBuildInfo: true
+          mvnCommand: clean install
+          sourceLocation: .
+          configFileLocation: .
+          configFileName: settings.xml
+          integrations: 
+            - name: art
+          inputResources:
+            - name: mavenrepo
