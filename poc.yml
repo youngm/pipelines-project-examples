@@ -17,4 +17,4 @@ pipelines:
         type: Bash
         execution:
           onExecute:
-            - echo "ello world1"
+            - echo "hello world1"
