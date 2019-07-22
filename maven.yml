@@ -1,11 +1,11 @@
 resources:
-  -name: mavenrepo
-  type: GitRepo
-  configuration:
-    gitProvider: github
-    path: Manojtuguru/project-examples/maven-example/
-    branches: 
-      include: master
+  - name: mavenrepo
+    type: GitRepo
+    configuration:
+      gitProvider: github
+      path: Manojtuguru/project-examples/maven-example/
+      branches: 
+        include: master
 
 pipelines:
   - name: maven_pipeline
