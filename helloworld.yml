@@ -15,7 +15,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myApprepo1
+          #  - name: myApprepo1
         execution:
           onExecute:
             - printenv
