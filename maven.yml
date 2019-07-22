@@ -8,16 +8,16 @@ resources:
       include: master
 
 pipelines:
-  -name: maven_pipeline
-   steps:
-    -name: step1
-    type: MvnBuild
-    configuration:
+  - name: maven_pipeline
+    steps:
+      - name: step1
+        type: MvnBuild
+        configuration:
       # inherits from bash
       mvnCommand: clean install
       sourceLocation: .
       configFileLocation: .
       configFileName: settings.xml
       inputResources:
-        -name: mavenrepo
+        - name: mavenrepo
       autoPublishBuildInfo: true
