@@ -19,5 +19,5 @@ pipelines:
           configFileName: settings.xml
           integrations: 
             - name: art
-          inputResources:
+        inputResources:
             - name: mavenrepo
