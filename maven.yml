@@ -1,0 +1,23 @@
+resources:
+  -name: mavenrepo
+  type: GitRepo
+  configuration:
+    gitProvider: github
+    path: Manojtuguru/project-examples
+    branches: 
+      include: master
+
+pipelines:
+  -name: maven_pipeline
+   steps:
+    -name: step1
+    type: MvnBuild
+    configuration:
+      # inherits from bash
+      mvnCommand: clean install
+      sourceLocation: .
+      configFileLocation: .
+      configFileName: settings.xml
+      inputResources:
+        -name: mavenrepo
+      autoPublishBuildInfo: true
