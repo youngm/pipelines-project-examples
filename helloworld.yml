@@ -1,10 +1,10 @@
 
 resources:
-  - name: myAppRepo
+  - name: myApprepo1
     type: GitRepo
     configuration:
       gitProvider: manoj_github   # replace with your integration
-      path: manishas/app    # replace with your repository name
+      path: pipelines-project-examples    # replace with your repository name
       branches:
         include: master
 
@@ -15,11 +15,11 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myAppRepo
+            - name: myApprepo1
         execution:
           onExecute:
             - printenv
-            - echo $res_myAppRepo_commitSha
+            - echo $res_myApprepo1_commitSha
             - add_run_variables first_stepid=$step_id
 
       - name: step_2
