@@ -1,3 +1,15 @@
+resources:
+  - name: mavenrepo
+    type: GitRepo
+    configuration:
+      gitProvider: github
+      path: Manojtuguru/pipelines-project-examples
+      branches: 
+        include: master
+      buildon:
+        commit: true
+
+
 pipelines:
   - name: first_pipeline
     steps:
