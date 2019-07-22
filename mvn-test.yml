@@ -9,7 +9,7 @@ resources:
   - name: project_example
     type: GitRepo
     configuration:
-      gitProvider:  git_manojtuguru
+      gitProvider:  manoj_github
       path: manojtuguru/project-examples
  
 pipelines:
