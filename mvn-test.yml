@@ -2,14 +2,14 @@ resources:
   - name: build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: manoj_art
+      sourceArtifactory: art
       buildName: mvn_example_build
       buildNumber: 1
       
   - name: project_example
     type: GitRepo
     configuration:
-      gitProvider:  manoj_github
+      gitProvider:  github_manojtuguru
       path: manojtuguru/project-examples
  
 pipelines:
@@ -31,7 +31,7 @@ pipelines:
           inputResources:
             - name: project_example
           integrations:
-            - name: manoj_art
+            - name: art
         execution:
           onStart:
             - _set_jdk openjdk8
